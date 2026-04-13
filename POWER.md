@@ -273,3 +273,10 @@ tavily_research({
 - [Crawl API Reference](https://docs.tavily.com/documentation/api-reference/endpoint/crawl)
 - [Map API Reference](https://docs.tavily.com/documentation/api-reference/endpoint/map)
 - [Research API Reference](https://docs.tavily.com/documentation/api-reference/endpoint/research)
+
+## License and Support
+
+This power integrates with [Tavily MCP Server](https://github.com/tavily-ai/tavily-mcp) (MIT).
+
+- [Privacy Policy](https://tavily.com/privacy)
+- [Support](https://docs.tavily.com)

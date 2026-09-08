@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tavily",
+  "version": "1.0.1",
+  "description": "Search, extract, crawl, map, and research the web with Tavily MCP tools and bundled skills for research, enrichment, monitoring, and integrations.",
+  "author": {
+    "name": "Tavily",
+    "url": "https://tavily.com"
+  },
+  "homepage": "https://docs.tavily.com",
+  "repository": "https://github.com/tavily-ai/tavily-power",
+  "keywords": [
+    "tavily", "search", "web-search", "web", "lookup", "find", "internet",
+    "extract", "crawl", "scrape", "map", "research", "rag", "realtime", "latest",
+    "competitor", "sales", "vendor", "kyc", "threat", "investment", "academic",
+    "enrichment", "entity-list", "monitor", "migration"
+  ]
+}

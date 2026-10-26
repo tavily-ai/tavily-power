@@ -4,7 +4,7 @@ inclusion: manual
 
 # Tavily API Reference
 
-Full parameter and response reference for all 5 Tavily MCP tools.
+Parameter and response reference for the five core Tavily MCP tools (search, extract, crawl, map, research). The connected server's `tools/list` is authoritative; inspect it for newer parameters.
 
 ## tavily_search
 
@@ -17,7 +17,7 @@ Search the web for current information on any topic. Returns snippets and source
 | `query` | string | **Required** | Search query |
 | `max_results` | integer | 5 | Maximum number of results to return |
 | `search_depth` | string | `"basic"` | `"basic"`, `"advanced"`, `"fast"`, `"ultra-fast"` |
-| `topic` | string | `"general"` | Search category (only `"general"` supported) |
+| `topic` | string | `"general"` | Search category: `"general"` or `"news"` (use `"news"` only when the user asks for news coverage) |
 | `time_range` | string | null | `"day"`, `"week"`, `"month"`, `"year"` |
 | `start_date` | string | `""` | Results after this date (`YYYY-MM-DD`) |
 | `end_date` | string | `""` | Results before this date (`YYYY-MM-DD`) |
@@ -28,6 +28,7 @@ Search the web for current information on any topic. Returns snippets and source
 | `include_images` | boolean | false | Include query-related images |
 | `include_image_descriptions` | boolean | false | Include images with AI descriptions |
 | `include_favicon` | boolean | false | Include favicon URL per result |
+| `exact_match` | boolean | null | Only return results containing the exact quoted phrase(s) in `query` |
 
 ### Search Depth
 

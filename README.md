@@ -29,7 +29,7 @@ Tavily powers the retrieval layer for thousands of AI applications, from RAG pip
 3. Enter: `https://github.com/tavily-ai/tavily-power`
 4. On first use, your browser will open for OAuth login — tokens are cached automatically
 
-Alternatively, get an API key from your [Tavily dashboard](https://app.tavily.com) and set `TAVILY_API_KEY` in your environment.
+Setting `TAVILY_API_KEY` alone does not configure the remote MCP server; it is only read by the Tavily CLI. To connect with an API key instead of OAuth, follow the [Tavily Kiro guide](https://docs.tavily.com/documentation/integrations/kiro) and keep the key in Kiro's own MCP settings, not in this power's `mcp.json`.
 
 ## What Can You Do with Tavily and Kiro?
 

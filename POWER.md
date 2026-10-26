@@ -10,7 +10,7 @@ author: "Tavily"
 
 Before using Tavily, you need a Tavily account. Sign up at [tavily.com](https://tavily.com) if you don't have one. Authentication is handled via OAuth — on first MCP connection, your browser will open for login. Tokens are cached in `~/.mcp-auth/`.
 
-Alternatively, get an API key from your Tavily dashboard and set `TAVILY_API_KEY` in your environment.
+Setting `TAVILY_API_KEY` alone does not configure the remote MCP server; it is only read by the Tavily CLI. To connect with an API key instead of OAuth, follow the [Tavily Kiro guide](https://docs.tavily.com/documentation/integrations/kiro) and keep the key in Kiro's own MCP settings, not in this power's `mcp.json`.
 
 # Overview
 
@@ -24,18 +24,18 @@ Tavily provides LLM-optimized APIs for web search, content extraction, site craw
 - **Map**: Discover URLs on a site without extracting content
 - **Research**: End-to-end AI-powered research from multiple sources
 
-**Authentication**: OAuth via MCP server (auto-prompted on first use), or `TAVILY_API_KEY` environment variable.
+**Authentication**: OAuth via MCP server (auto-prompted on first use).
 
 ## Available Steering Files
 
-- **api-reference** — Full parameter and response reference for all 5 Tavily MCP tools
+- **api-reference** — Parameter and response reference for the five core Tavily MCP tools
 
 ## Available MCP Servers
 
 ### tavily
 
 **Connection:** HTTPS API endpoint at `https://mcp.tavily.com/mcp`
-**Authorization:** OAuth (browser login on first use) or Bearer token via `TAVILY_API_KEY`
+**Authorization:** OAuth (browser login on first use)
 
 **Tools:**
 
@@ -212,9 +212,9 @@ tavily_research({
 **Cause:** Token expired or not yet obtained
 **Solution:**
 
-1. Clear cached tokens in `~/.mcp-auth/` (WARNING: This will also log you out of other MCP servers. Consider adding an environment variable instead.)
+1. Clear cached tokens in `~/.mcp-auth/` (WARNING: This will also log you out of other MCP servers.)
 2. Reconnect — browser will open for OAuth login
-3. Or set `TAVILY_API_KEY` environment variable directly
+3. To use an API key instead, configure it in Kiro's MCP settings (see the Tavily Kiro guide); `TAVILY_API_KEY` in the environment does not configure this server
 
 ### Error: No results returned
 
@@ -245,13 +245,13 @@ tavily_research({
 
 ## Configuration
 
-**Authentication**: OAuth (recommended) or API key
+**Authentication**: OAuth (recommended); API key only through Kiro's MCP settings
 
 **Setup Steps:**
 
 1. Create a Tavily account at [tavily.com](https://tavily.com)
 2. On first MCP connection, complete OAuth login in browser
-3. Or: get API key from dashboard → set `TAVILY_API_KEY` in environment
+3. API key alternative: add it in Kiro's MCP settings per the Tavily Kiro guide (not via the environment)
 
 **MCP Configuration:**
 
